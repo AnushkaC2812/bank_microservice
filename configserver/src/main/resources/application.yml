@@ -1,0 +1,23 @@
+spring:
+  application:
+   name:"configserver"
+  profiles:
+    #active: native
+     active: git
+  cloud:
+    config:
+      server:
+        #native:
+          #search-locations:
+        git:
+         uri: "https://github.com/AnushkaC2812/bank-microservice-config.git"
+         default-label: main  #default branch
+         timeout: 5
+         clone-on-start: true
+         force-pull: true
+
+encrypt:  #encrypt api gets automatically provided
+  key: "bakbfuhf8929174qjf"
+
+server:
+ port: 8071
